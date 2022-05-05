@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Vigenère</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="static/iconpuzzle.png" rel="icon">
+  <!--<link href="static/assets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="static/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="static/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="static/assets/css/style.css" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center">
+
+      <div class="logo me-auto">
+        <h1><a href="index.html">Vigenère</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="static/assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto active" href="#about">About</a></li>
+          <li><a class="nav-link scrollto active" href="#try">Try</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="fade-up">
+          <div>
+            <h1>Learn how to encrypt a message with the Vigenère cipher</h1>
+            <h2>First described by Giovan Battista Bellaso in 1553, the cipher is easy to understand and implement, but it resisted all attempts to break it until 1863, three centuries later.</h2>
+            <a href="#about" class="btn-get-started scrollto">Get Started</a>
+          </div>
+        </div>
+        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="fade-left">
+          <img src="static/mainico.png" class="img-fluid" alt="">
+        </div>
+      </div>
+    </div>
+
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-6" data-aos="zoom-in">
+            <img src="static/vigeneresquare.png" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 d-flex flex-column justify-contents-center" data-aos="fade-left">
+            <div class="content pt-4 pt-lg-0">
+              <h3>Learn more about Vigenère cipher</h3>
+              <p class="fst-italic">
+                Vigenere Cipher is a method of encrypting alphabetic text. 
+                It uses a simple form of polyalphabetic substitution. 
+                A polyalphabetic cipher is any cipher based on substitution, using multiple substitution alphabets. 
+                The encryption of the original text is done using the Vigenère square or Vigenère table.
+              </p>
+              <ul>
+                <li><i class="bi bi-check-circle"></i> The table consists of the alphabets written out 26 times in different rows, each alphabet shifted cyclically to the left compared to the previous alphabet, corresponding to the 26 possible Caesar Ciphers.</li>
+                <li><i class="bi bi-check-circle"></i> At different points in the encryption process, the cipher uses a different alphabet from one of the rows.</li>
+                <li><i class="bi bi-check-circle"></i> The alphabet used at each point depends on a repeating keyword.</li>
+              </ul>
+              <p>
+                Decryption is performed by going to the row in the table corresponding to the key, finding the position of the ciphertext letter in this row, and then using the column's label as the plaintext.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Cipher Section ======= -->
+    <section id="try">
+
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="fade-up">
+            <div>
+              <h1>Vigenère cipher</h1>
+              <h3>Try it yourself!</h3>
+              <div class="mb-3 form-group">
+                <label class="form-label">Plain-text:</label>
+                <input type="text" class="form-control" style="width: 70%;" id="message" placeholder="Message" name="message">
+              </div>
+              <div class="mb-3 form-group">
+                <label class="form-label">Keyword:</label>
+                <input type="text" class="form-control" style="width: 70%;" id="key" placeholder="Key" name="key">
+              </div>
+              <div class="mb-3">
+                <label class="form-label"><i class="bi bi-check-circle"></i>  Results:</label>
+                <!-- <input class="form-control" type="text" id="cipher" value="cipher" style="width: 70%;" aria-label="cipher" disabled readonly name="cipher"> -->
+                <h3 id="result" class="p-3 mb-2 bg-dark text-white" style="width: 70%; height: 64px;"></h3>
+              </div>
+              <div class="form-check form-check-inline form-group">
+                <input class="form-check-input" type="radio" name="metho" id="metho" value="encrypt" checked="checked">
+                <label class="form-check-label" for="inlineRadio1">Encrypt</label>
+              </div>
+              <div class="form-check form-check-inline form-group form-group">
+                <input class="form-check-input" type="radio" name="metho" id="metho2" value="decrypt">
+                <label class="form-check-label" for="inlineRadio2">Decrypt</label>
+              </div>
+              <button class="btn btn-primary" type="submit" onclick="pass_data();">Try it</button>
+            </div>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="fade-left">
+            <img src="static/bill.png" class="img-fluid" alt="">
+          </div>
+        </div>
+      </div>
+
+  </section><!-- End Hero -->
+
+    <!-- ======= Cta Section ======= -->
+    <section id="cta" class="cta">
+      <div class="container">
+
+        <div class="row" data-aos="zoom-in">
+          <div class="col-lg-9 text-center text-lg-start">
+            <h3>Call To Action</h3>
+            <p>Now is the moment you do your implementation in code, here is my source code in python for you to look. </p>
+          </div>
+          <div class="col-lg-3 cta-btn-container text-center">
+            <a class="cta-btn align-middle" href="https://github.com/miguelvalderrama/projects/blob/main/vigenere.py">Go to Github</a>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Cta Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Miguel Valderrama</span></strong>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="static/assets/vendor/aos/aos.js"></script>
+  <script src="static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="static/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="static/assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="static/assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Ajax JQuery File-->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="static/assets/js/main.js"></script>
+  
+  <script>
+      function pass_data() {
+          var plaintext = document.getElementById("message")
+          var key = document.getElementById("key")
+          var mett = document.querySelector('input[name="metho"]:checked')
+          
+          $.ajax({
+              data: {
+                  message: plaintext.value,
+                  key: key.value,
+                  met: mett.value
+              },
+              type: 'POST',
+              url: '/vige'
+          })
+          .done(function(data) {
+                if (data.error) {
+                    $('#result').text(data.error)
+                }
+                else {
+                    $('#result').text(data.success)
+                }
+          });
+
+          event.preventDefault();
+        
+      }
+  </script>
+</body>
+</html>
